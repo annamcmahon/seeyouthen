@@ -25,7 +25,7 @@ class SignUpController: UIViewController {
   		user.email = email.text
 		
   // other fields can be set just like with PFObject
-        user.setObject("status", forKeyedSubscript: "0")
+        user.setValue(0, forKey: "status")
         //user.setObject("profPic", forKeyedSubscript: UIImage(named: "headshot.JPG"))
 
 		
@@ -35,6 +35,8 @@ class SignUpController: UIViewController {
 		let errorString = error.userInfo?["error"] as? NSString
 		self.showAlert(errorString!)
 	} else {
+		self.dismissViewControllerAnimated(true, completion: {});
+		
 		self.performSegueWithIdentifier("signupSegue", sender: self)
 	}
   }

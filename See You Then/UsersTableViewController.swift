@@ -16,6 +16,7 @@ class UsersTableViewController: UITableViewController {
 
     
     func getParseData() -> Array<AnyObject>{
+	
         var query = PFUser.query()!
         var users = query.findObjects()
         return users!
@@ -23,20 +24,30 @@ class UsersTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        var query = PFUser.query()!
-        //query.whereKey("username", equalTo: "AnnaM")
-        userData = query.findObjects()!
+		var currentUser = PFUser.currentUser()
 
-//		query = PFQuery(className:"Challenges")
-//        query.getObjectInBackgroundWithId("Fu2NG2AO7a") {
-//		 (gameScore: PFObject?, error: NSError?) -> Void in
-//             if error == nil && gameScore != nil {
-//               //println(gameScore)
-//             } else {
-//             //  println(error)
-//             }
+		if currentUser != nil {
+			println("there is a  user")
+		} else {
+			println("no user")
+			self.performSegueWithIdentifier("loginSegue", sender: self)
+		}
 		
+//		if let currentUser = PFUser.currentUser() {
+//			// TODO check if being timed
+//			var singlequery = PFUser.query()!
+//			singlequery.whereKey("username", equalTo: currentUser.username!)
+//			userData = singlequery.findObjects()!
+//			var beingTimed = true;
+//			if beingTimed{
+//				self.performSegueWithIdentifier("beingTimeSegue", sender: self)
+//			}
+//		}
+		
+		
+		
+        var query = PFUser.query()!
+        userData = query.findObjects()!
     }
 	
 	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -90,7 +101,8 @@ class UsersTableViewController: UITableViewController {
 	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if segue.identifier == "personSelected" {
-			let nextView = segue.destinationViewController as! TimerViewController
+			let navController = segue.destinationViewController as! UINavigationController
+			let nextView = navController.topViewController as! TimerViewController
 			nextView.currentPerson = userData[thePersonSelected] as! PFUser
 		}
 	}

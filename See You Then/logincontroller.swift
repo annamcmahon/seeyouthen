@@ -24,6 +24,11 @@ class loginViewController: UIViewController {
 		//backView.addGestureRecognizer(tap)
 		
 	}
+	@IBAction func createAccount(sender: AnyObject) {
+		//performSegueWithIdentifier("createAccountSegue", sender: self)
+		self.dismissViewControllerAnimated(true, completion: {});
+
+	}
 	
 
 	//Calls this function when the tap is recognized.

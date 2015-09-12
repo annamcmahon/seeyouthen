@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	let settings = UIUserNotificationSettings(forTypes: userNotificationTypes, categories: nil)
 	application.registerUserNotificationSettings(settings)
 	application.registerForRemoteNotifications()
-	
+
 	
 	return true;
 	}

@@ -11,7 +11,7 @@ import Parse
 
 
 class TimerViewController: UIViewController,UIPickerViewDelegate {
-    
+	
     @IBOutlet weak var timePicker: UIPickerView!
 	var currentPerson : PFUser = PFUser()
 
@@ -21,14 +21,15 @@ class TimerViewController: UIViewController,UIPickerViewDelegate {
     let timePickerMinutesData = [00,05,10, 15,20, 30]//["00", "05","10","15", "20", "30"]
     
     
+	@IBAction func cancelTimer(sender: AnyObject) {
+		self.dismissViewControllerAnimated(true, completion: {});
+	}
     override func viewDidLoad() {
         super.viewDidLoad()
-        //timePicker.source = self
-        timePicker.delegate = self
-        // Do any additional setup after loading the view.
-        // get user picker data
-		personName.text = currentPerson.username
 		
+        timePicker.delegate = self
+		personName.text = currentPerson.username
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,9 +50,13 @@ class TimerViewController: UIViewController,UIPickerViewDelegate {
 				return timePickerMinutesData.count
 			}
 		}
+	func pickerView(pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+		return 100
+	}
 	
 	func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
 		if(component == 0){
+			
 			return String(self.timePickerHoursData[row])
 		}
 		else{
