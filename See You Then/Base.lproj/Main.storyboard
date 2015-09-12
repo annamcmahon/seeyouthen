@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PkQ-3r-22e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PkQ-3r-22e">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -68,12 +68,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="87I-6T-qs5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1408" y="1983"/>
+            <point key="canvasLocation" x="648" y="2711"/>
         </scene>
-        <!--View Controller-->
+        <!--Timer View Controller-->
         <scene sceneID="S5J-P8-3WB">
             <objects>
-                <viewController id="pd4-yJ-xdb" sceneMemberID="viewController">
+                <viewController id="pd4-yJ-xdb" customClass="TimerViewController" customModule="See_You_Then" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JWQ-4l-flc"/>
                         <viewControllerLayoutGuide type="bottom" id="MwC-iG-qhx"/>
@@ -86,12 +86,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dU6-Eb-45v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2130" y="1118"/>
+            <point key="canvasLocation" x="2758" y="2388"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bJD-yK-08z">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mTK-E1-0tT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="5eF-k9-rwb" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lsb-HI-KW0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -101,8 +100,9 @@
                         <segue destination="PkQ-3r-22e" kind="show" id="qRX-ff-5tJ"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mTK-E1-0tT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="1128"/>
+            <point key="canvasLocation" x="1378" y="1934"/>
         </scene>
         <!--Timer View Controller-->
         <scene sceneID="ddZ-mq-nBU">
@@ -116,8 +116,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nd-pL-OSb">
-                                <rect key="frame" x="253" y="452" width="94" height="81"/>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGR-xJ-AtT">
+                                <rect key="frame" x="140" y="119" width="320" height="180"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Challenged" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlF-yi-U6p">
+                                <rect key="frame" x="140" y="28" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nd-pL-OSb">
+                                <rect key="frame" x="253" y="343" width="94" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="5pG-C4-bhh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -126,26 +138,28 @@
                                     <action selector="startButtonClicked:" destination="k6J-vK-YyF" eventType="touchUpInside" id="dXM-pz-gCY"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGR-xJ-AtT">
-                                <rect key="frame" x="124" y="282" width="352" height="162"/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of Challenged" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlF-yi-U6p">
-                                <rect key="frame" x="16" y="223" width="568" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lGR-xJ-AtT" firstAttribute="top" secondItem="tlF-yi-U6p" secondAttribute="bottom" constant="62.5" id="7Ku-yW-a2C"/>
+                            <constraint firstItem="tlF-yi-U6p" firstAttribute="top" secondItem="SWn-y6-N6o" secondAttribute="bottom" constant="8" id="Jb5-Kc-nHy"/>
+                            <constraint firstAttribute="centerX" secondItem="lGR-xJ-AtT" secondAttribute="centerX" id="Q6C-BI-EfT"/>
+                            <constraint firstItem="0nd-pL-OSb" firstAttribute="width" secondItem="tlF-yi-U6p" secondAttribute="width" id="RJO-8R-Vs1"/>
+                            <constraint firstItem="0nd-pL-OSb" firstAttribute="top" secondItem="lGR-xJ-AtT" secondAttribute="bottom" constant="70" id="Xeu-Kx-Gm0"/>
+                            <constraint firstItem="0nd-pL-OSb" firstAttribute="width" secondItem="lGR-xJ-AtT" secondAttribute="width" id="Xsi-F9-wDG"/>
+                            <constraint firstItem="BQL-cq-Dem" firstAttribute="top" secondItem="0nd-pL-OSb" secondAttribute="bottom" constant="176" id="aq2-NJ-p8y"/>
+                            <constraint firstAttribute="centerX" secondItem="tlF-yi-U6p" secondAttribute="centerX" id="iWO-AE-OLG"/>
+                            <constraint firstAttribute="centerX" secondItem="0nd-pL-OSb" secondAttribute="centerX" id="ufq-Ih-iCb"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="personName" destination="tlF-yi-U6p" id="v6M-J6-x2W"/>
                         <outlet property="timePicker" destination="lGR-xJ-AtT" id="3YV-g7-HaC"/>
-                        <segue destination="Wb5-9e-5F1" kind="show" identifier="loginSegue" id="1CL-tx-Gko"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8hm-Ck-C5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2842" y="1174"/>
+            <point key="canvasLocation" x="3480" y="1924"/>
         </scene>
         <!--Users Table View Controller-->
         <scene sceneID="fmL-Q0-KbG">
@@ -156,7 +170,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="75" id="Vhx-tH-cm1" customClass="UserTableViewCell" customModule="See_You_Then" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="75" id="Vhx-tH-cm1" customClass="UserTableViewCell" customModule="See_You_Then" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vhx-tH-cm1" id="deF-aF-ko0">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -203,12 +217,13 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="pd4-yJ-xdb" kind="show" id="gVz-h9-zjf"/>
+                        <segue destination="Wb5-9e-5F1" kind="presentation" identifier="loginSegue" id="6kW-WW-43v"/>
+                        <segue destination="k6J-vK-YyF" kind="presentation" identifier="personSelected" id="twg-Vv-8sr"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kyy-FS-YjW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1408" y="1118"/>
+            <point key="canvasLocation" x="2036" y="1924"/>
         </scene>
         <!--Sign Up Controller-->
         <scene sceneID="wDc-Us-85a">
@@ -231,7 +246,7 @@
                                     <action selector="signupAction:" destination="lFb-fb-65b" eventType="touchUpInside" id="9Hg-82-8aZ"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wps-6k-HlT">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wps-6k-HlT">
                                 <rect key="frame" x="239" y="171" width="87" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -264,7 +279,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QDr-D1-EZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1408" y="2692"/>
+            <point key="canvasLocation" x="1448" y="2711"/>
         </scene>
     </scenes>
 </document>

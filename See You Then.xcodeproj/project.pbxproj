@@ -32,7 +32,6 @@
 		DD1BD5DB1BA42BAC009715BC /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BD5DA1BA42BAC009715BC /* TimerViewController.swift */; };
 		DD1BD5DF1BA4737D009715BC /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BD5DE1BA4737D009715BC /* UserTableViewCell.swift */; };
 		DD1BD5E01BA474E3009715BC /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BD5DC1BA4721C009715BC /* UsersTableViewController.swift */; };
-		DD1BD5E21BA47B2E009715BC /* headshot.JPG in Resources */ = {isa = PBXBuildFile; fileRef = DD1BD5E11BA47B2E009715BC /* headshot.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +74,6 @@
 		DD1BD5DA1BA42BAC009715BC /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		DD1BD5DC1BA4721C009715BC /* UsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		DD1BD5DE1BA4737D009715BC /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
-		DD1BD5E11BA47B2E009715BC /* headshot.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = headshot.JPG; path = ../headshot.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +110,6 @@
 		95D0823A1BA3F76800E6F70A = {
 			isa = PBXGroup;
 			children = (
-				DD1BD5E11BA47B2E009715BC /* headshot.JPG */,
 				95D0826B1BA3FD3A00E6F70A /* Framework */,
 				95D082451BA3F76800E6F70A /* See You Then */,
 				95D0825E1BA3F76800E6F70A /* See You ThenTests */,
@@ -290,7 +287,6 @@
 				95D082511BA3F76800E6F70A /* Main.storyboard in Resources */,
 				95D082561BA3F76800E6F70A /* LaunchScreen.xib in Resources */,
 				95D082531BA3F76800E6F70A /* Images.xcassets in Resources */,
-				DD1BD5E21BA47B2E009715BC /* headshot.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
