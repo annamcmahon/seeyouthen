@@ -28,6 +28,8 @@
 		95D082831BA4016000E6F70A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D082821BA4016000E6F70A /* libsqlite3.dylib */; };
 		95D082851BA4017100E6F70A /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D082841BA4017100E6F70A /* Accounts.framework */; };
 		95D082871BA4017900E6F70A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D082861BA4017900E6F70A /* Social.framework */; };
+		95D0828A1BA40F1A00E6F70A /* logincontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D082891BA40F1A00E6F70A /* logincontroller.swift */; };
+		95D082911BA4198F00E6F70A /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D082901BA4198F00E6F70A /* SignUpController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		95D082821BA4016000E6F70A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		95D082841BA4017100E6F70A /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		95D082861BA4017900E6F70A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		95D082891BA40F1A00E6F70A /* logincontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = logincontroller.swift; sourceTree = "<group>"; };
+		95D082901BA4198F00E6F70A /* SignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 		95D082451BA3F76800E6F70A /* See You Then */ = {
 			isa = PBXGroup;
 			children = (
+				95D082881BA40ED600E6F70A /* login */,
 				95D082481BA3F76800E6F70A /* AppDelegate.swift */,
 				95D0824D1BA3F76800E6F70A /* ViewController.swift */,
 				95D0824F1BA3F76800E6F70A /* Main.storyboard */,
@@ -177,6 +182,15 @@
 				95D0826D1BA3FD7100E6F70A /* Parse.framework */,
 			);
 			name = Framework;
+			sourceTree = "<group>";
+		};
+		95D082881BA40ED600E6F70A /* login */ = {
+			isa = PBXGroup;
+			children = (
+				95D082891BA40F1A00E6F70A /* logincontroller.swift */,
+				95D082901BA4198F00E6F70A /* SignUpController.swift */,
+			);
+			name = login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,7 +293,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95D082911BA4198F00E6F70A /* SignUpController.swift in Sources */,
 				95D0824E1BA3F76800E6F70A /* ViewController.swift in Sources */,
+				95D0828A1BA40F1A00E6F70A /* logincontroller.swift in Sources */,
 				95D0824C1BA3F76800E6F70A /* See_You_Then.xcdatamodeld in Sources */,
 				95D082491BA3F76800E6F70A /* AppDelegate.swift in Sources */,
 			);
@@ -487,6 +503,7 @@
 				95D082671BA3F76800E6F70A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		95D082681BA3F76800E6F70A /* Build configuration list for PBXNativeTarget "See You ThenTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +512,7 @@
 				95D0826A1BA3F76800E6F70A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
