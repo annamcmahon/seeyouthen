@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A5D491EB-E45A-4415-A7DC-81BC5ED2FA4D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6950B70D2F7995A424F63C86327A30DAE7BDD06D</key>
+		<string>https://github.com/annamcmahon/seeyouthen.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>See You Then.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6950B70D2F7995A424F63C86327A30DAE7BDD06D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/annamcmahon/seeyouthen.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6950B70D2F7995A424F63C86327A30DAE7BDD06D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6950B70D2F7995A424F63C86327A30DAE7BDD06D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>See%20You%20Then</string>
+		</dict>
+	</array>
+</dict>
+</plist>
