@@ -15,7 +15,7 @@
         <!--View Controller-->
         <scene sceneID="7lF-TK-zJV">
             <objects>
-                <viewController id="Wb5-9e-5F1" sceneMemberID="viewController">
+                <viewController id="Wb5-9e-5F1" customClass="ViewController" customModule="See_You_Then" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8kJ-ck-e6O"/>
                         <viewControllerLayoutGuide type="bottom" id="vu2-Ug-F4b"/>

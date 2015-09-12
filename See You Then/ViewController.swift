@@ -14,11 +14,11 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		let testObject = PFObject(className: "TestObject")
-		testObject["foo"] = "bar"
+		testObject.setObject("bar", forKeyedSubscript: "foo")
 		testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
 			println("Object has been saved.")
 		}
-		// Do any additional setup after loading the view, typically from a nib.
+
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -31,6 +31,7 @@ class ViewController: UIViewController {
 		var phoneNumber2 = 612-618-3669
 		var time = 10;
 		
+	
 		// make calls to twilio api with two numbers
         // hello anna
 	}
