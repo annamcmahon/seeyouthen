@@ -37,9 +37,6 @@ class loginViewController: UIViewController {
 		// Dispose of any resources that can be recreated.
 	}
 	
-
-
-	
 	@IBAction func loginButtonAction(sender: UIButton) {
 		PFUser.logInWithUsernameInBackground(usernametext.text, password:passwordtext.text) {
 			(user: PFUser?, error: NSError?) -> Void in

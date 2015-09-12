@@ -129,13 +129,7 @@
         <!--Page View Controller-->
         <scene sceneID="PCu-hq-ttM">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Tny-od-Wxl" sceneMemberID="viewController">
-                    <connections>
-                        <segue destination="VPb-Az-UWl" kind="popoverPresentation" id="Che-Db-Xbf">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
-                    </connections>
-                </pageViewController>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Tny-od-Wxl" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3H-sm-ReI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="918" y="537"/>
@@ -181,7 +175,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uoN-Pu-6SV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1573" y="506"/>
+            <point key="canvasLocation" x="1857" y="514"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
