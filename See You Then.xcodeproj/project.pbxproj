@@ -30,6 +30,7 @@
 		95D082871BA4017900E6F70A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D082861BA4017900E6F70A /* Social.framework */; };
 		95D0828A1BA40F1A00E6F70A /* logincontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D082891BA40F1A00E6F70A /* logincontroller.swift */; };
 		95D082911BA4198F00E6F70A /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D082901BA4198F00E6F70A /* SignUpController.swift */; };
+		DD1BD5DB1BA42BAC009715BC /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BD5DA1BA42BAC009715BC /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		95D082861BA4017900E6F70A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		95D082891BA40F1A00E6F70A /* logincontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = logincontroller.swift; sourceTree = "<group>"; };
 		95D082901BA4198F00E6F70A /* SignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		DD1BD5DA1BA42BAC009715BC /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				95D082881BA40ED600E6F70A /* login */,
 				95D082481BA3F76800E6F70A /* AppDelegate.swift */,
 				95D0824D1BA3F76800E6F70A /* ViewController.swift */,
+				DD1BD5DA1BA42BAC009715BC /* TimerViewController.swift */,
 				95D0824F1BA3F76800E6F70A /* Main.storyboard */,
 				95D082521BA3F76800E6F70A /* Images.xcassets */,
 				95D082541BA3F76800E6F70A /* LaunchScreen.xib */,
@@ -297,6 +300,7 @@
 				95D0824E1BA3F76800E6F70A /* ViewController.swift in Sources */,
 				95D0828A1BA40F1A00E6F70A /* logincontroller.swift in Sources */,
 				95D0824C1BA3F76800E6F70A /* See_You_Then.xcdatamodeld in Sources */,
+				DD1BD5DB1BA42BAC009715BC /* TimerViewController.swift in Sources */,
 				95D082491BA3F76800E6F70A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
