@@ -30,6 +30,9 @@
 		95D0828A1BA40F1A00E6F70A /* logincontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D082891BA40F1A00E6F70A /* logincontroller.swift */; };
 		95D082911BA4198F00E6F70A /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D082901BA4198F00E6F70A /* SignUpController.swift */; };
 		DD1BD5DB1BA42BAC009715BC /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BD5DA1BA42BAC009715BC /* TimerViewController.swift */; };
+		DD1BD5DF1BA4737D009715BC /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BD5DE1BA4737D009715BC /* UserTableViewCell.swift */; };
+		DD1BD5E01BA474E3009715BC /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BD5DC1BA4721C009715BC /* UsersTableViewController.swift */; };
+		DD1BD5E21BA47B2E009715BC /* headshot.JPG in Resources */ = {isa = PBXBuildFile; fileRef = DD1BD5E11BA47B2E009715BC /* headshot.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,9 @@
 		95D082891BA40F1A00E6F70A /* logincontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = logincontroller.swift; sourceTree = "<group>"; };
 		95D082901BA4198F00E6F70A /* SignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		DD1BD5DA1BA42BAC009715BC /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		DD1BD5DC1BA4721C009715BC /* UsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
+		DD1BD5DE1BA4737D009715BC /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		DD1BD5E11BA47B2E009715BC /* headshot.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = headshot.JPG; path = ../headshot.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,7 @@
 		95D0823A1BA3F76800E6F70A = {
 			isa = PBXGroup;
 			children = (
+				DD1BD5E11BA47B2E009715BC /* headshot.JPG */,
 				95D0826B1BA3FD3A00E6F70A /* Framework */,
 				95D082451BA3F76800E6F70A /* See You Then */,
 				95D0825E1BA3F76800E6F70A /* See You ThenTests */,
@@ -127,8 +134,10 @@
 			children = (
 				95D082881BA40ED600E6F70A /* login */,
 				95D082481BA3F76800E6F70A /* AppDelegate.swift */,
+				DD1BD5DC1BA4721C009715BC /* UsersTableViewController.swift */,
 				95D0824D1BA3F76800E6F70A /* ViewController.swift */,
 				DD1BD5DA1BA42BAC009715BC /* TimerViewController.swift */,
+				DD1BD5DE1BA4737D009715BC /* UserTableViewCell.swift */,
 				95D0824F1BA3F76800E6F70A /* Main.storyboard */,
 				95D082521BA3F76800E6F70A /* Images.xcassets */,
 				95D082541BA3F76800E6F70A /* LaunchScreen.xib */,
@@ -281,6 +290,7 @@
 				95D082511BA3F76800E6F70A /* Main.storyboard in Resources */,
 				95D082561BA3F76800E6F70A /* LaunchScreen.xib in Resources */,
 				95D082531BA3F76800E6F70A /* Images.xcassets in Resources */,
+				DD1BD5E21BA47B2E009715BC /* headshot.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,8 +310,10 @@
 			files = (
 				95D082911BA4198F00E6F70A /* SignUpController.swift in Sources */,
 				95D0824E1BA3F76800E6F70A /* ViewController.swift in Sources */,
+				DD1BD5E01BA474E3009715BC /* UsersTableViewController.swift in Sources */,
 				95D0828A1BA40F1A00E6F70A /* logincontroller.swift in Sources */,
 				95D0824C1BA3F76800E6F70A /* See_You_Then.xcdatamodeld in Sources */,
+				DD1BD5DF1BA4737D009715BC /* UserTableViewCell.swift in Sources */,
 				DD1BD5DB1BA42BAC009715BC /* TimerViewController.swift in Sources */,
 				95D082491BA3F76800E6F70A /* AppDelegate.swift in Sources */,
 			);

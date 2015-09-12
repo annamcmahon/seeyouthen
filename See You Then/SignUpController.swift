@@ -15,6 +15,8 @@ class SignUpController: UIViewController {
 	@IBOutlet var password: UITextField!
 	@IBOutlet var email: UITextField!
 	@IBOutlet var username: UITextField!
+    var status: Int!
+    var profPic: UIImage!
 	
 	@IBAction func signupAction(sender: UIButton) {
 		var user = PFUser()
@@ -23,8 +25,8 @@ class SignUpController: UIViewController {
   		user.email = email.text
 		
   // other fields can be set just like with PFObject
-  //user["phone"] = "415-392-0202"
-		user.setObject("phone", forKeyedSubscript: "foo")
+        user.setObject("status", forKeyedSubscript: "0")
+        //user.setObject("profPic", forKeyedSubscript: UIImage(named: "headshot.JPG"))
 
 		
   user.signUpInBackgroundWithBlock {
