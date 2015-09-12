@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+
 
 class TimerViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
 
@@ -15,7 +17,7 @@ class TimerViewController: UIViewController,UIPickerViewDataSource,UIPickerViewD
     @IBOutlet weak var timePicker: UIPickerView!
     
     let userPickerData = ["Bob","Joe","Stan"]
-    let timePickerData = [5,10,15]
+    let timePickerData = ["5","10","15"]
     
     
     override func viewDidLoad() {
@@ -25,31 +27,43 @@ class TimerViewController: UIViewController,UIPickerViewDataSource,UIPickerViewD
         //timePicker.source = self
         timePicker.delegate = self
         // Do any additional setup after loading the view.
+		var currentUser = PFUser.currentUser()
+		if currentUser != nil {
+			println("there is a  user")
+		} else {
+			println("no user")
+			self.performSegueWithIdentifier("loginSegue", sender: self)
+		}
+		// get user picker data
+		
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+	
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return userPickerData.count
+		if(pickerView == userPicker){
+			return userPickerData.count
+		}
+		else{
+			return timePickerData.count
+		}
     }
-
+	
+	func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+			return userPickerData[row]
+		}
+		else{
+			return self.timePickerData[row]
+		}
+		
+	}
     @IBAction func startButtonClicked(sender: UIButton) {
         self.title = "Stop";
     }
