@@ -24,6 +24,8 @@ class SignUpController: UIViewController {
 		
   // other fields can be set just like with PFObject
   //user["phone"] = "415-392-0202"
+		user.setObject("phone", forKeyedSubscript: "foo")
+
 		
   user.signUpInBackgroundWithBlock {
 	(succeeded: Bool, error: NSError?) -> Void in

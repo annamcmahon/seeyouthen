@@ -202,7 +202,6 @@
             </objects>
             <point key="canvasLocation" x="112" y="1520"/>
         </scene>
-<<<<<<< HEAD
         <!--Page View Controller-->
         <scene sceneID="PCu-hq-ttM">
             <objects>
@@ -254,7 +253,5 @@
             </objects>
             <point key="canvasLocation" x="1857" y="514"/>
         </scene>
-=======
->>>>>>> 22aabcf9428aa5cf1574b560cfd801ce95e64c52
     </scenes>
 </document>
