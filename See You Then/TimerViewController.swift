@@ -11,14 +11,16 @@ import Parse
 
 
 class TimerViewController: UIViewController,UIPickerViewDelegate {
+	var minutes = 0
+	var seconds = 0
 	
     @IBOutlet weak var timePicker: UIPickerView!
 	var currentPerson : PFUser = PFUser()
 
 	@IBOutlet var personName: UILabel!
-	let timePickerHoursData = [0,1, 2, 3, 4, 5]//["0", "1", "2", "3", "4", "5"]
-    
-    let timePickerMinutesData = [00,05,10, 15,20, 30]//["00", "05","10","15", "20", "30"]
+	let timePickerMinutesData = [0,1, 2, 3, 4, 5]//["0", "1", "2", "3", "4", "5"]
+	let units = ["min", "sec"]
+    let timePickerSecondsData = [00,05,10, 15,20, 30]//["00", "05","10","15", "20", "30"]
     
     
 	@IBAction func cancelTimer(sender: AnyObject) {
@@ -26,7 +28,9 @@ class TimerViewController: UIViewController,UIPickerViewDelegate {
 	}
     override func viewDidLoad() {
         super.viewDidLoad()
-		
+		timePicker.showsSelectionIndicator = true
+		//timePicker.selectedRowInComponent(0)
+
         timePicker.delegate = self
 		personName.text = currentPerson.username
 
@@ -39,15 +43,21 @@ class TimerViewController: UIViewController,UIPickerViewDelegate {
 	
     // components are ACROSS
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 2
+        return 4
     }
 	// Scrollable upt and down
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
 			if(component == 0){
-				return timePickerHoursData.count
+				return timePickerMinutesData.count
+			}
+			else if component == 1{
+				return 1
+			}
+			else if component == 2 {
+				return timePickerSecondsData.count
 			}
 			else{
-				return timePickerMinutesData.count
+				return 1
 			}
 		}
 	func pickerView(pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
@@ -55,38 +65,53 @@ class TimerViewController: UIViewController,UIPickerViewDelegate {
 	}
 	
 	func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-		if(component == 0){
-			
-			return String(self.timePickerHoursData[row])
+		if component == 0 {
+			return String(self.timePickerMinutesData[row])
+		}
+		else if component == 1{
+			return String(self.units[0])
+		}
+		else if component == 2 {
+			return String(self.timePickerSecondsData[row])
 		}
 		else{
-			return String(timePickerMinutesData[row])
+			return String(self.units[1])
 		}
 		}
 		
     @IBAction func startButtonClicked(sender: UIButton) {
 		
-		var hours = timePickerHoursData[timePicker.selectedRowInComponent(0)]
-		var minutes = timePickerMinutesData[timePicker.selectedRowInComponent(1)]
-		var timeMinutes = minutes + hours*60;
+		minutes = timePickerMinutesData[timePicker.selectedRowInComponent(0)]
+		seconds = timePickerSecondsData[timePicker.selectedRowInComponent(1)]
 		
         self.title = "Stop";
 		
 		var challenge = PFObject(className:"Challenges")
 		challenge.setValue("ANNA", forKey: "Challenger")
 		challenge.setValue(currentPerson.username!, forKey: "Challenged")
-		challenge.setValue(timeMinutes, forKey: "timeLeft")
-		
+		challenge.setValue(minutes, forKey: "timeMinutes")
+		challenge.setValue(seconds, forKey: "seconds")
+
 		
 		challenge.saveInBackgroundWithBlock {
 			(success: Bool, error: NSError?) -> Void in
 			if (success) {
-			println("success")
+				println("success")
 			} else {
 				println("not")
 
 			}
 		}
-    }
-
+		self.performSegueWithIdentifier("startTime", sender: self)
+	}
+	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if segue.identifier == "startTime" {
+			let navController = segue.destinationViewController as! UINavigationController
+			let nextView = navController.topViewController as! DDHDemoViewController
+			nextView.minutes = self.minutes
+			nextView.seconds = self.seconds
+		}
+	}
+	
 }

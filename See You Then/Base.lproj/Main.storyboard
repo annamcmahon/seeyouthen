@@ -69,12 +69,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="87I-6T-qs5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="648" y="2711"/>
+            <point key="canvasLocation" x="1204" y="2211"/>
         </scene>
-        <!--Timer View Controller-->
+        <!--RACE IS ON-->
         <scene sceneID="S5J-P8-3WB">
             <objects>
-                <viewController id="pd4-yJ-xdb" customClass="TimerViewController" customModule="See_You_Then" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pd4-yJ-xdb" customClass="DDHDemoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JWQ-4l-flc"/>
                         <viewControllerLayoutGuide type="bottom" id="MwC-iG-qhx"/>
@@ -82,15 +82,30 @@
                     <view key="view" contentMode="scaleToFill" id="89N-Ak-FXr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ANa-Ql-23t">
+                                <rect key="frame" x="-16" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="3Lk-Yw-nSJ"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="vNp-Gc-mwp"/>
+                    <navigationItem key="navigationItem" title="RACE IS ON" id="vNp-Gc-mwp">
+                        <barButtonItem key="leftBarButtonItem" title="home" id="f9d-ah-7vk">
+                            <connections>
+                                <segue destination="Afk-2Q-Ad2" kind="show" id="JCN-UC-JTj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dU6-Eb-45v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationItem title="Title" id="NvJ-gs-yLk"/>
             </objects>
             <point key="canvasLocation" x="2942" y="2196"/>
         </scene>
-        <!--Users-->
+        <!--See You Then-->
         <scene sceneID="cCO-Ss-A6l">
             <objects>
                 <tableViewController id="Afk-2Q-Ad2" customClass="UsersTableViewController" customModule="See_You_Then" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,13 +128,13 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZI-hR-Cbf">
                                             <rect key="frame" x="75" y="27" width="450" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐒" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMX-F4-hMI">
                                             <rect key="frame" x="543" y="13" width="56" height="48"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.90526705470000002" green="0.90526705470000002" blue="0.90526705470000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -137,6 +152,7 @@
                                         <constraint firstItem="HZI-hR-Cbf" firstAttribute="leading" secondItem="Dtc-4n-gdI" secondAttribute="trailing" constant="8" id="z6r-pJ-aPL"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="profPic" destination="Dtc-4n-gdI" id="84B-ZW-Oxz"/>
                                     <outlet property="status" destination="GMX-F4-hMI" id="KdF-Vg-4hP"/>
@@ -149,7 +165,7 @@
                             <outlet property="delegate" destination="Afk-2Q-Ad2" id="L3n-ra-vdl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Users" id="WSp-0Y-xeE"/>
+                    <navigationItem key="navigationItem" title="See You Then" id="WSp-0Y-xeE"/>
                     <connections>
                         <segue destination="Wb5-9e-5F1" kind="presentation" identifier="loginSegue" id="vy8-X8-1qn"/>
                         <segue destination="ubB-qH-LZ9" kind="presentation" identifier="personSelected" id="yQV-et-OcH"/>
@@ -158,7 +174,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Hg-Cd-jYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1340" y="1103"/>
+            <point key="canvasLocation" x="1763" y="1319"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KyK-74-gbr">
@@ -188,13 +204,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nd-pL-OSb">
-                                <rect key="frame" x="253" y="249" width="94" height="81"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nd-pL-OSb">
+                                <rect key="frame" x="0.0" y="442" width="600" height="81"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="81" id="5pG-C4-bhh"/>
+                                    <constraint firstAttribute="width" constant="600" id="Pa8-uY-wtQ"/>
+                                    <constraint firstAttribute="height" constant="81" id="Vc0-Oz-ZXb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Start">
+                                <state key="normal" title=" Challenge Them!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -207,24 +224,46 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGR-xJ-AtT">
-                                <rect key="frame" x="140" y="119" width="320" height="162"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lGR-xJ-AtT">
+                                <rect key="frame" x="16" y="279" width="568" height="162"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="tintColor" red="0.90526705470000002" green="0.90526705470000002" blue="0.90526705470000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="568" id="MfH-kI-Iex"/>
+                                </constraints>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set the Timer:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfC-uA-Ant">
+                                <rect key="frame" x="246" y="237" width="107.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="So Your freind is ALWAYS late?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb4-ug-qWB">
+                                <rect key="frame" x="180" y="134" width="240" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="6He-yI-Prp"/>
+                                    <constraint firstAttribute="height" constant="21" id="G4p-mJ-goS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lGR-xJ-AtT" firstAttribute="top" secondItem="tlF-yi-U6p" secondAttribute="bottom" constant="62.5" id="7Ku-yW-a2C"/>
-                            <constraint firstItem="tlF-yi-U6p" firstAttribute="top" secondItem="SWn-y6-N6o" secondAttribute="bottom" constant="8" id="Jb5-Kc-nHy"/>
-                            <constraint firstAttribute="centerX" secondItem="lGR-xJ-AtT" secondAttribute="centerX" id="Q6C-BI-EfT"/>
-                            <constraint firstItem="0nd-pL-OSb" firstAttribute="width" secondItem="tlF-yi-U6p" secondAttribute="width" id="RJO-8R-Vs1"/>
-                            <constraint firstItem="0nd-pL-OSb" firstAttribute="top" secondItem="lGR-xJ-AtT" secondAttribute="bottom" constant="70" id="Xeu-Kx-Gm0"/>
-                            <constraint firstItem="0nd-pL-OSb" firstAttribute="width" secondItem="lGR-xJ-AtT" secondAttribute="width" id="Xsi-F9-wDG"/>
-                            <constraint firstItem="BQL-cq-Dem" firstAttribute="top" secondItem="0nd-pL-OSb" secondAttribute="bottom" constant="176" id="aq2-NJ-p8y"/>
-                            <constraint firstAttribute="centerX" secondItem="tlF-yi-U6p" secondAttribute="centerX" id="iWO-AE-OLG"/>
-                            <constraint firstAttribute="centerX" secondItem="0nd-pL-OSb" secondAttribute="centerX" id="ufq-Ih-iCb"/>
+                            <constraint firstItem="0nd-pL-OSb" firstAttribute="centerX" secondItem="lGR-xJ-AtT" secondAttribute="centerX" id="82J-w9-u93"/>
+                            <constraint firstAttribute="centerX" secondItem="lGR-xJ-AtT" secondAttribute="centerX" id="MkR-Yp-8Ox"/>
+                            <constraint firstItem="Xb4-ug-qWB" firstAttribute="centerX" secondItem="nfC-uA-Ant" secondAttribute="centerX" id="TNO-Sw-iuh"/>
+                            <constraint firstItem="0nd-pL-OSb" firstAttribute="centerX" secondItem="tlF-yi-U6p" secondAttribute="centerX" id="WZZ-of-ZbN"/>
+                            <constraint firstItem="Xb4-ug-qWB" firstAttribute="top" secondItem="SWn-y6-N6o" secondAttribute="bottom" constant="70" id="blY-HH-4Hw"/>
+                            <constraint firstItem="0nd-pL-OSb" firstAttribute="top" secondItem="lGR-xJ-AtT" secondAttribute="bottom" constant="1" id="i5B-e0-tWg"/>
+                            <constraint firstAttribute="centerY" secondItem="lGR-xJ-AtT" secondAttribute="centerY" constant="-60" id="lyz-jg-0PN"/>
+                            <constraint firstItem="nfC-uA-Ant" firstAttribute="top" secondItem="Xb4-ug-qWB" secondAttribute="bottom" constant="82.5" id="niq-36-bZs"/>
+                            <constraint firstAttribute="centerX" secondItem="nfC-uA-Ant" secondAttribute="centerX" id="tjn-cd-YBu"/>
+                            <constraint firstItem="lGR-xJ-AtT" firstAttribute="top" secondItem="nfC-uA-Ant" secondAttribute="bottom" constant="21.5" id="y52-HM-kBI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="VTh-TQ-anq">
+                    <navigationItem key="navigationItem" id="VTh-TQ-anq">
                         <barButtonItem key="leftBarButtonItem" title="cancel" id="J3d-m2-W1J">
                             <connections>
                                 <action selector="cancelTimer:" destination="k6J-vK-YyF" id="Yoi-NG-UYl"/>
@@ -235,6 +274,7 @@
                     <connections>
                         <outlet property="personName" destination="tlF-yi-U6p" id="v6M-J6-x2W"/>
                         <outlet property="timePicker" destination="lGR-xJ-AtT" id="3YV-g7-HaC"/>
+                        <segue destination="byH-nN-5YF" kind="presentation" identifier="startTime" id="Eya-Fp-QH6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8hm-Ck-C5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -303,11 +343,12 @@
                         <outlet property="email" destination="c3t-RN-mwN" id="gyO-NO-FIJ"/>
                         <outlet property="password" destination="1Fc-9A-beD" id="Z3B-QI-uf9"/>
                         <outlet property="username" destination="wps-6k-HlT" id="8Nk-Mm-7hS"/>
+                        <segue destination="Afk-2Q-Ad2" kind="presentation" identifier="signupSegue" id="PSH-uM-R9V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QDr-D1-EZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="656" y="3527"/>
+            <point key="canvasLocation" x="1192" y="2987"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="k85-eQ-38S">
@@ -325,7 +366,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iii-On-BNL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2384" y="1302"/>
+            <point key="canvasLocation" x="2538" y="1314"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aTG-oW-Yr1">
@@ -346,4 +387,8 @@
             <point key="canvasLocation" x="2130" y="2196"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JCN-UC-JTj"/>
+        <segue reference="tzF-3o-XV3"/>
+    </inferredMetricsTieBreakers>
 </document>

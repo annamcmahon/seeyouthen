@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9564CA791BA4D6B20046D7AB /* DDHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9564CA761BA4D6B20046D7AB /* DDHAppDelegate.m */; };
+		9564CA7A1BA4D6B20046D7AB /* DDHDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9564CA781BA4D6B20046D7AB /* DDHDemoViewController.m */; };
+		9564CA7D1BA4D80D0046D7AB /* DDHTimerControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 9564CA7C1BA4D80D0046D7AB /* DDHTimerControl.m */; };
+		958AFC191BA529F60060FC61 /* barack.gif in Resources */ = {isa = PBXBuildFile; fileRef = 958AFC131BA529F60060FC61 /* barack.gif */; };
+		958AFC1A1BA529F60060FC61 /* jkf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 958AFC141BA529F60060FC61 /* jkf.jpg */; };
+		958AFC1B1BA529F60060FC61 /* AE.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 958AFC151BA529F60060FC61 /* AE.jpg */; };
+		958AFC1C1BA529F60060FC61 /* bc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 958AFC161BA529F60060FC61 /* bc.jpg */; };
+		958AFC1D1BA529F60060FC61 /* oprah.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 958AFC171BA529F60060FC61 /* oprah.jpg */; };
+		958AFC1E1BA529F60060FC61 /* marlyn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 958AFC181BA529F60060FC61 /* marlyn.jpg */; };
 		95D082491BA3F76800E6F70A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D082481BA3F76800E6F70A /* AppDelegate.swift */; };
 		95D0824C1BA3F76800E6F70A /* See_You_Then.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95D0824A1BA3F76800E6F70A /* See_You_Then.xcdatamodeld */; };
 		95D0824E1BA3F76800E6F70A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D0824D1BA3F76800E6F70A /* ViewController.swift */; };
@@ -45,6 +54,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9564CA741BA4D6B10046D7AB /* See You Then-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "See You Then-Bridging-Header.h"; sourceTree = "<group>"; };
+		9564CA751BA4D6B20046D7AB /* DDHAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHAppDelegate.h; sourceTree = "<group>"; };
+		9564CA761BA4D6B20046D7AB /* DDHAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHAppDelegate.m; sourceTree = "<group>"; };
+		9564CA771BA4D6B20046D7AB /* DDHDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHDemoViewController.h; sourceTree = "<group>"; };
+		9564CA781BA4D6B20046D7AB /* DDHDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHDemoViewController.m; sourceTree = "<group>"; };
+		9564CA7B1BA4D80D0046D7AB /* DDHTimerControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHTimerControl.h; sourceTree = "<group>"; };
+		9564CA7C1BA4D80D0046D7AB /* DDHTimerControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHTimerControl.m; sourceTree = "<group>"; };
+		958AFC131BA529F60060FC61 /* barack.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = barack.gif; sourceTree = "<group>"; };
+		958AFC141BA529F60060FC61 /* jkf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jkf.jpg; sourceTree = "<group>"; };
+		958AFC151BA529F60060FC61 /* AE.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AE.jpg; sourceTree = "<group>"; };
+		958AFC161BA529F60060FC61 /* bc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bc.jpg; sourceTree = "<group>"; };
+		958AFC171BA529F60060FC61 /* oprah.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = oprah.jpg; sourceTree = "<group>"; };
+		958AFC181BA529F60060FC61 /* marlyn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = marlyn.jpg; sourceTree = "<group>"; };
 		95D082431BA3F76800E6F70A /* See You Then.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "See You Then.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D082471BA3F76800E6F70A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95D082481BA3F76800E6F70A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,7 +161,14 @@
 				95D082521BA3F76800E6F70A /* Images.xcassets */,
 				95D082541BA3F76800E6F70A /* LaunchScreen.xib */,
 				95D0824A1BA3F76800E6F70A /* See_You_Then.xcdatamodeld */,
+				9564CA751BA4D6B20046D7AB /* DDHAppDelegate.h */,
+				9564CA761BA4D6B20046D7AB /* DDHAppDelegate.m */,
+				9564CA771BA4D6B20046D7AB /* DDHDemoViewController.h */,
+				9564CA7B1BA4D80D0046D7AB /* DDHTimerControl.h */,
+				9564CA7C1BA4D80D0046D7AB /* DDHTimerControl.m */,
+				9564CA781BA4D6B20046D7AB /* DDHDemoViewController.m */,
 				95D082461BA3F76800E6F70A /* Supporting Files */,
+				9564CA741BA4D6B10046D7AB /* See You Then-Bridging-Header.h */,
 			);
 			path = "See You Then";
 			sourceTree = "<group>";
@@ -147,6 +176,12 @@
 		95D082461BA3F76800E6F70A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				958AFC131BA529F60060FC61 /* barack.gif */,
+				958AFC141BA529F60060FC61 /* jkf.jpg */,
+				958AFC151BA529F60060FC61 /* AE.jpg */,
+				958AFC161BA529F60060FC61 /* bc.jpg */,
+				958AFC171BA529F60060FC61 /* oprah.jpg */,
+				958AFC181BA529F60060FC61 /* marlyn.jpg */,
 				95D082471BA3F76800E6F70A /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -285,8 +320,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				95D082511BA3F76800E6F70A /* Main.storyboard in Resources */,
+				958AFC1A1BA529F60060FC61 /* jkf.jpg in Resources */,
+				958AFC1D1BA529F60060FC61 /* oprah.jpg in Resources */,
+				958AFC1C1BA529F60060FC61 /* bc.jpg in Resources */,
 				95D082561BA3F76800E6F70A /* LaunchScreen.xib in Resources */,
+				958AFC191BA529F60060FC61 /* barack.gif in Resources */,
 				95D082531BA3F76800E6F70A /* Images.xcassets in Resources */,
+				958AFC1E1BA529F60060FC61 /* marlyn.jpg in Resources */,
+				958AFC1B1BA529F60060FC61 /* AE.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,14 +345,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9564CA791BA4D6B20046D7AB /* DDHAppDelegate.m in Sources */,
 				95D082911BA4198F00E6F70A /* SignUpController.swift in Sources */,
 				95D0824E1BA3F76800E6F70A /* ViewController.swift in Sources */,
 				DD1BD5E01BA474E3009715BC /* UsersTableViewController.swift in Sources */,
+				9564CA7A1BA4D6B20046D7AB /* DDHDemoViewController.m in Sources */,
 				95D0828A1BA40F1A00E6F70A /* logincontroller.swift in Sources */,
 				95D0824C1BA3F76800E6F70A /* See_You_Then.xcdatamodeld in Sources */,
 				DD1BD5DF1BA4737D009715BC /* UserTableViewCell.swift in Sources */,
 				DD1BD5DB1BA42BAC009715BC /* TimerViewController.swift in Sources */,
 				95D082491BA3F76800E6F70A /* AppDelegate.swift in Sources */,
+				9564CA7D1BA4D80D0046D7AB /* DDHTimerControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +484,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -450,6 +495,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "See You Then/See You Then-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -457,6 +504,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -467,6 +515,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "See You Then/See You Then-Bridging-Header.h";
 			};
 			name = Release;
 		};

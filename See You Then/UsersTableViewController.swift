@@ -13,14 +13,29 @@ class UsersTableViewController: UITableViewController {
     
     var userData = Array<AnyObject>()
 	var thePersonSelected = 0;
-
-    
-    func getParseData() -> Array<AnyObject>{
-	
-        var query = PFUser.query()!
-        var users = query.findObjects()
-        return users!
-    }
+	var profPics: [UIImage] = [
+		UIImage(named: "barack.gif")!,
+		UIImage(named: "AE.jpg")!,
+		UIImage(named: "jkf.jpg")!,
+		UIImage(named: "bc.jpg")!,
+		UIImage(named: "jkf.jpg")!,
+		UIImage(named: "marlyn.jpg")!,
+		UIImage(named: "oprah.jpg")!,
+		UIImage(named: "marlyn.jpg")!,
+		UIImage(named: "jkf.jpg")!,
+		UIImage(named: "jkf.jpg")!,
+		UIImage(named: "marlyn.jpg")!,
+		UIImage(named: "oprah.jpg")!,
+		UIImage(named: "marlyn.jpg")!,
+		UIImage(named: "jkf.jpg")!
+	]
+//	var colors: [String] = [
+//		[173,255,47],  //green
+//		[154,205,50],
+//		[255,165,0],
+//		[255,69,0],
+//		[255,0,0]
+//	]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,20 +47,7 @@ class UsersTableViewController: UITableViewController {
 			println("no user")
 			self.performSegueWithIdentifier("loginSegue", sender: self)
 		}
-		
-//		if let currentUser = PFUser.currentUser() {
-//			// TODO check if being timed
-//			var singlequery = PFUser.query()!
-//			singlequery.whereKey("username", equalTo: currentUser.username!)
-//			userData = singlequery.findObjects()!
-//			var beingTimed = true;
-//			if beingTimed{
-//				self.performSegueWithIdentifier("beingTimeSegue", sender: self)
-//			}
-//		}
-		
-		
-		
+	
         var query = PFUser.query()!
         userData = query.findObjects()!
     }
@@ -89,7 +91,31 @@ class UsersTableViewController: UITableViewController {
         
         cell.userName.text = userData[row].username
 		cell.status.text =  "1"//userData[row].attribute("status", atIndex: row, effectiveRange: 1,10)
-
+		cell.profPic.image = profPics[row]
+		if (cell.status.text)!.toInt() <= 3 {
+			cell.backgroundColor = UIColor(red: 65/255, green: 212/255, blue: 114/255, alpha: 1.0) // green
+		}
+		else if (cell.status.text)!.toInt() <= 6 {
+			cell.backgroundColor = UIColor(red: 154/255, green: 205/255, blue: 50/255, alpha: 1.0) // green
+		}
+		else if (cell.status.text)!.toInt() <= 10 {
+			cell.backgroundColor = UIColor(red: 255/255, green: 165/255, blue: 0, alpha: 1.0) // green
+			}
+		else if (cell.status.text)!.toInt() <= 14 {
+			cell.backgroundColor = UIColor(red: 255/255, green: 69/255, blue: 0, alpha: 1.0) // green
+			}
+		else {
+			cell.backgroundColor = UIColor(red: 255/255, green: 0, blue: 0, alpha: 1.0) // green
+			}
+//		else if cell.status <= 10 {
+//				cell.backgroundColor = colors[2]
+//		}
+//		else if cell.status <= 14 {
+//				cell.backgroundColor = colors[1]
+//		}
+//		else{
+//			cell.backgroundColor = colors[0]
+//		}
         //cell.profPic = userData[row].profPic
         return cell
         }
